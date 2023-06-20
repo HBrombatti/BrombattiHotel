@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hotel Brombatti</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Shippori Antique B1', sans-serif;
+    }
+
+    .w3-bar .w3-bar-item {
+      padding: 10px 13px;
+      float: left;
+      min-width: 13px;
+      border: none;
+      display: block;
+      outline: 0;
+    }
+
+    .w3-bar .logo {
+      width: 12vw;
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Navigation Bar -->
+  <div class="w3-bar w3-white w3-large">
+    <a href="#" class="logo w3-bar-item w3-button w3-green w3-mobile">
+      <i class="fa fa-bed w3-margin-right"></i>Hotel Brombatti
+    </a>
+    <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Quartos</a>
+    <a href="#about" class="w3-bar-item w3-button w3-mobile">Sobre</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contato</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Agende na Hora!</a>
+  </div>
+  <!-- Header -->
+  <header class="w3-display-container w3-content" style="width:74vw;max-width:74vw !important;">
+    <img class="w3-image" src="img/img01.jpg" alt="The Hotel" style="min-width:1000px" width="1600" height="800">
+
+    <div class="w3-display-left w3-padding w3-col l6 m8">
+      <div class="w3-container w3-green">
+        <h2><i class="fa fa-bed w3-margin-right"></i>Consulte Disponibilidade</h2>
+      </div>
+      <div class="w3-container w3-white w3-padding-16">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px;">
+            <div class="w3-half w3-margin-bottom">
+              <label><i class="fa fa-calendar-o"></i> Check In</label>
+              <input class="w3-input w3-border" type="text" placeholder="DD MM AAAA" name="CheckIn" required>
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-calendar-o"></i> Check Out</label>
+              <input class="w3-input w3-border" type="text" placeholder="DD MM AAAA" name="CheckOut" required>
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin:8px -16px;">
+            <div class="w3-half w3-margin-bottom">
+              <label><i class="fa fa-male"></i> Adultos</label>
+              <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-child"></i> Crianças</label>
+              <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+            </div>
+          </div>
+          <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i>
+            Procurar</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1532px;">
+
+    <div class="w3-container w3-margin-top" id="rooms">
+      <h3>Quartos</h3>
+      <p>Sinta-se em casa é o nosso lema. Oferecemos as melhores camas do setor. Durma bem e descanse bem.</p>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col m3">
+        <label><i class="fa fa-calendar-o"></i> Check In</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM AAAA">
+      </div>
+      <div class="w3-col m3">
+        <label><i class="fa fa-calendar-o"></i> Check Out</label>
+        <input class="w3-input w3-border" type="text" placeholder="DD MM AAAA">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-male"></i> Adulto</label>
+        <input class="w3-input w3-border" type="number" placeholder="1">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-child"></i> Criança</label>
+        <input class="w3-input w3-border" type="number" placeholder="0">
+      </div>
+      <div class="w3-col m2">
+        <label><i class="fa fa-search"></i> Procure</label>
+        <button class="w3-button w3-block w3-green">Procure</button>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-content w3-display-container carousel">
+          <img class="chuchu" src="img/img02.jpg" style="width:100%">
+          <img class="chuchu" src="img/is-01.jpg" style="width:100%">
+          <img class="chuchu" src="img/is-02.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="trocar(-1, 1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="trocar(1, 1)">&#10095;</button>
+        </div>
+        <div class="w3-container w3-white">
+          <h3>Single </h3>
+          <h6 class="w3-opacity">Por $99</h6>
+          <p>Cama Simples </p>
+          <p>15m<sup>2</sup></p>
+          <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+          <button class="w3-button w3-block w3-green w3-margin-bottom">Escolha de Quartos</button>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <!-- <img src="img/img03.jpg" alt="Norway" style="width:100%"> -->
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides2" src="img/img03.jpg" style="width:100%">
+          <img class="mySlides2" src="img/is-03.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="trocar02(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="trocar02(1)">&#10095;</button>
+        </div>
+        <div class="w3-container w3-white">
+          <h3>Double </h3>
+          <h6 class="w3-opacity">Por $149</h6>
+          <p>Cama Queen-size </p>
+          <p>25m<sup>2</sup></p>
+          <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+              class="fa fa-tv"></i></p>
+          <button class="w3-button w3-block w3-green w3-margin-bottom">Escolha de Quartos</button>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <!-- <img src="img/img04.jpg" alt="Norway" style="width:100%"> -->
+        <div class="w3-content w3-display-container">
+          <img class="mySlides3" src="img/img04.jpg" style="width:100%">
+          <img class="mySlides3" src="img/is-04.jpg" style="width:100%">
+
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="w3-container w3-white">
+          <h3>Deluxe</h3>
+          <h6 class="w3-opacity">Por R$199</h6>
+          <p>Cama King-size </p>
+          <p>40m<sup>2</sup></p>
+          <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+              class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+          <button class="w3-button w3-block w3-green w3-margin-bottom">Escolha de Quartos</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding" id="about">
+      <div class="w3-col l4 12">
+        <h3>Sobre</h3>
+        <h6>Nosso hotel é único. Realmente incrível!</h6>
+        <p>Nós aceitamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
+            class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i
+            class="fa fa-cc-paypal w3-large"></i></p>
+      </div>
+      <div class="w3-col l8 12">
+        <!-- Image of location/map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19540.831059219072!2d-51.23093994881126!3d-30.026426660295435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979b3ffa05d1d%3A0x8dec0bfa619baa92!2sManhattan%20Porto%20Alegre%20By%20Mercure!5e0!3m2!1spt-BR!2sbr!4v1687273910691!5m2!1spt-BR!2sbr"
+          width="900" height="350" style="border:50;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+      <div class="w3-third"><i class="fa fa-map-marker w3-text-dark"></i> 387 Av. Mauricio Cardoso, Novo Hamburgo,RS -
+        BR</div>
+      <div class="w3-third"><i class="fa fa-phone w3-text-dark"></i> Fone: +51 3502054048</div>
+      <div class="w3-third"><i class="fa fa-envelope w3-text-dark"></i> Email: contato@brombattihotel.com</div>
+    </div>
+
+    <div class="w3-panel w3-green w3-leftbar w3-padding-32">
+      <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i>Caso tenha interesse também ofertamos
+        sobre demanda playstation, baby sitters, equipamentos para seu pet, etc.</h6>
+    </div>
+
+    <div class="w3-container">
+      <h3>Nossos Hotéis</h3>
+      <h6>Você pode nos encontrar todo lugar no Mundo:</h6>
+    </div>
+
+    <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-display-container">
+          <img src="img/img-Cinque Terre.jpg" alt="Cinque Terre" style="width:100%">
+          <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
+        </div>
+      </div>
+      <div class="w3-half">
+        <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-display-container">
+              <img src="img/img-New York.jpg" alt="New York" style="width:100%">
+              <span class="w3-display-bottomleft w3-padding">New York</span>
+            </div>
+          </div>
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-display-container">
+              <img src="img/img-San Francisco.jpg" alt="San Francisco" style="width:100%">
+              <span class="w3-display-bottomleft w3-padding">San Francisco</span>
+            </div>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-display-container">
+              <img src="img/img-Pisa.jpg" alt="Pisa" style="width:100%">
+              <span class="w3-display-bottomleft w3-padding">Pisa</span>
+            </div>
+          </div>
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-display-container">
+              <img src="img/img-Paris.jpg" alt="Paris" style="width:100%">
+              <span class="w3-display-bottomleft w3-padding">Paris</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding-32 w3-green w3-opacity w3-card w3-hover-opacity-off" style="margin:32px 0;">
+      <h2>Receba as melhores ofertas primeiro!</h2>
+      <p>Acompanhe nosso Newsletter.</p>
+      <label>E-mail</label>
+      <input class="w3-input w3-border" type="text" placeholder="Seu E-mail">
+      <button type="button" class="w3-button w3-black w3-margin-top">Inscreva-se</button>
+    </div>
+
+    <div class="w3-container" id="contact">
+      <h2>Contato</h2>
+      <p>Se você tiver alguma dúvida, não exite em nos perguntar!</p>
+
+      <i class="fa fa-map-marker w3-text-dark" style="width:30px"></i> 387 Av. Mauricio Cardoso, Novo Hamburgo,RS -
+      BR<br>
+      <i class="fa fa-phone w3-text-dark" style="width:30px"></i> Fone: +51 3502054048<br>
+      <i class="fa fa-envelope w3-text-dark" style="width:30px"> </i>Email: contato@brombattihotel.com<br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Menssagem" required
+            name="Menssagem"></p>
+        <p><button class="w3-button w3-black w3-padding-large" type="submit">ENVIAR MESSAGEM</button></p>
+      </form>
+    </div>
+
+    <!-- End page content -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-padding-32 w3-green w3-center w3-margin-top">
+    <h5>Encontre-nos</h5>
+    <div class="w3-xlarge w3-padding-16">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+  <!-- Add Google Maps -->
+  <script>
+    function myMap() {
+      myCenter = new google.maps.LatLng(41.878114, -87.629798);
+      var mapOptions = {
+        center: myCenter,
+        zoom: 12, scrollwheel: false, draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+  <!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
+-->
+
+  <script>
+    var slideIndex = 1;
+    trocarDivs(slideIndex);
+
+    function trocar(n) {
+      trocarDivs(slideIndex += n);
+    }
+
+    function trocarDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("chuchu");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    var slideIndex = 1;
+    torcaDivs(slideIndex);
+    function trocar02(n) {
+      torcaDivs(slideIndex += n);
+    }
+    function torcaDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides2");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides3");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+  </script>
+
+</body>
+
+</html>
